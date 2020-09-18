@@ -4,15 +4,12 @@
 #This will mostly only work on Ubuntu 18.04 LTS and newer.
 
 #Check if system is Ubuntu or Debian
-if [ "`lsb_release -is`" == "Ubuntu" ] || [ "`lsb_release -is`" == "Debian" ]
+if [ "`lsb_release -is`" == "Ubuntu" ] || [ "`lsb_release -is`" == "Debian" ] && ["`id -un`" == "root"]
 then
-  #Check if you are logged in as root
-  if ["`id -un`" == "root"]
-    Install
-  else
-    echo "You are not logged in as root. Login to root and try again."
+  Install
 else
   echo "You are not using a Ubuntu or Debian machine."
+  echo "You are also not logged in as root. Please try again while logged in as root."
 fi
 
 Install() {
