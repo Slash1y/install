@@ -10,7 +10,7 @@ else
   echo "You are also not logged in as root. Please try again while logged in as root."
 fi
 
-Install() {
+function Install {
   # Install XFCE4-Desktop
   echo "Installing XFCE4-Desktop with extras."
   apt-get install -y xfce4
