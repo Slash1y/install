@@ -1,8 +1,6 @@
 #!/bin/bash
-
 #This script is for downloading and installing basic functions for the machine.
 #This will mostly only work on Ubuntu 18.04 LTS and newer.
-
 #Check if system is Ubuntu or Debian
 if [ "`lsb_release -is`" == "Ubuntu" ] || [ "`lsb_release -is`" == "Debian" ] && ["`id -un`" == "root"]
 then
@@ -15,13 +13,13 @@ fi
 Install() {
   # Install XFCE4-Desktop
   echo "Installing XFCE4-Desktop with extras."
-  apt-get install xfce4 -y
-  apt-get install firefox -y
-  apt-get install qbittorrent -y
-  apt-get install gparted -y
+  apt-get install -y xfce4
+  apt-get install -y firefox
+  apt-get install -y qbittorrent
+  apt-get install -y gparted
   echo "Installing TightVNCServer"
-  apt-get install tightvncserver -y
-  apt-get install software-common-properties -y
+  apt-get install -y tightvncserver
+  apt-get install -y software-common-properties
   echo "Installing CURL, TAR, UNZIP and GIT"
-  apt-get install curl tar unzip git
+  apt-get install -y curl tar unzip git
 }
